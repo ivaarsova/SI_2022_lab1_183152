@@ -1,5 +1,5 @@
 bread x 3
-eggs x 4
+eggs x 6
 flour x 2
 milk x 5
 suggar x 1
