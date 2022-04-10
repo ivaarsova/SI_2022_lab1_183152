@@ -1,0 +1,162 @@
+4. Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1 (master)
+$ git clone https://github.com/ivaarsova/SI_2022_lab1_183152.git
+Cloning into 'SI_2022_lab1_183152'...
+Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1 (master)
+$ cd SI_2022_lab1_183152
+-со наредбата git clone го клонирав remote репозиториумот на мојот компјутер и потоа со наредбата cd влегов во локалниот репозиториум.
+
+5. Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git add  shopping_list.txt
+
+Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master c4d1efa] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+-најпрво во локалниот репозиториум креирав датотека во која додадов 5 производи,потоа со git add ја додадов датотеката и направив комит со git commit -m
+
+6.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git add  shopping_list.txt
+
+Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git commit -m "Add quantities to the items"
+[master 742f31b] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+-се повторува истата постапка како во чекор 5
+
+7.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git branch branch1
+
+Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git branch branch2
+-со git branch креирав две гранки branch1 и branch2
+
+8.
+Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git log
+commit 742f31b4e398687dbf2a11db56ba2b71f8db8046 (HEAD -> master, branch2, branch1)
+Author: Iva Arsova <you@example.com>
+Date:   Sun Apr 10 21:46:16 2022 +0200
+
+    Add quantities to the items
+
+commit c4d1efac68b7bf17536d794792ec70ee3db15ea2
+Author: Iva Arsova <you@example.com>
+Date:   Sun Apr 10 21:44:50 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit c4089a2eaa9601c63c6ab4fa96adceb93cc152b1 (origin/master, origin/HEAD)
+Author: ivaarsova <82385291+ivaarsova@users.noreply.github.com>
+Date:   Sun Apr 10 21:40:38 2022 +0200
+
+    Update README.md
+
+commit 996d72f6f63587ae091d10615425fc13b9d0b146
+Author: ivaarsova <82385291+ivaarsova@users.noreply.github.com>
+Date:   Sun Apr 10 21:40:20 2022 +0200
+
+
+9. Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git push --all
+-со git push --all ги синхронизирав локалниот и remote репозиториум
+
+10.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+-со git checkout branch1 се префрлив на гранката branch1
+
+11.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (branch1)
+$ git add  shopping_list.txt
+
+Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (branch1)
+$ git commit -m "Change quantity of item #5"
+-најпрво направив промена на ставката потоа со git add ја додадов датотеката и направив комит со git commit -m
+
+12.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (branch1)
+$ git checkout master
+-се враќам на гранката master
+
+13.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git add  shopping_list.txt
+Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git commit -m "Change quantity of item #2"
+
+14.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$  git push --all
+-синхронизација на локален и remote репозиториум со git push --all
+
+15.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (master)
+$ git checkout branch2
+-префрлање на гранката branch2
+
+16.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (branch2)
+$ git add  shopping_list.txt
+
+Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (branch2)
+$ git commit -m "Modify item #4"
+
+17.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (branch2)
+$ git log
+commit e1738ea7b25d4a1431d5f7bb98e1968531b701b2 (HEAD -> branch2)
+Author: Iva Arsova <you@example.com>
+Date:   Sun Apr 10 21:55:39 2022 +0200
+
+    Modify item #4
+
+commit 742f31b4e398687dbf2a11db56ba2b71f8db8046 (origin/branch2)
+Author: Iva Arsova <you@example.com>
+Date:   Sun Apr 10 21:46:16 2022 +0200
+
+    Add quantities to the items
+
+commit c4d1efac68b7bf17536d794792ec70ee3db15ea2
+Author: Iva Arsova <you@example.com>
+Date:   Sun Apr 10 21:44:50 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit c4089a2eaa9601c63c6ab4fa96adceb93cc152b1
+Author: ivaarsova <82385291+ivaarsova@users.noreply.github.com>
+Date:   Sun Apr 10 21:40:38 2022 +0200
+
+    Update README.md
+
+
+18.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (branch2)
+$ git add  shopping_list.txt
+
+Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (branch2)
+$ git commit --amend -m "Modify item #4 and add item #6"
+-со git add ја додадов изменетата датотека и со git commit ја додадов изменетата датотека на претходниот комит
+
+19.Dell@DESKTOP-E0NFT8T MINGW64 ~/Desktop/SI lab1/SI_2022_lab1_183152 (branch2)
+$ git log
+commit b6d5d21224e8a316387bdf1aa6b6d51f264ef47e (HEAD -> branch2)
+Author: Iva Arsova <you@example.com>
+Date:   Sun Apr 10 21:55:39 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 742f31b4e398687dbf2a11db56ba2b71f8db8046 (origin/branch2)
+Author: Iva Arsova <you@example.com>
+Date:   Sun Apr 10 21:46:16 2022 +0200
+
+    Add quantities to the items
+
+commit c4d1efac68b7bf17536d794792ec70ee3db15ea2
+Author: Iva Arsova <you@example.com>
+Date:   Sun Apr 10 21:44:50 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit c4089a2eaa9601c63c6ab4fa96adceb93cc152b1
+Author: ivaarsova <82385291+ivaarsova@users.noreply.github.com>
+Date:   Sun Apr 10 21:40:38 2022 +0200
+
+    Update README.md
+
+
+22.-датотеката со документација ке ја внесам со git add  и ке направам комит со git commit -m "Add
+docs"
+23.с-синхронизација ке направам со git push --all
